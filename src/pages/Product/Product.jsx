@@ -69,15 +69,14 @@ const Product = () => {
             <span> Add to wishlist</span>
           </button>
         </div>
-        <hr  className="hr"/>
+        <hr/>
         <div className="product-details">
           <h2>Product Details</h2>
 
           <h4>Material & Care:</h4>
           <p>100% Cotton Machine Wash</p>
 
-          <h4>Country of Origin:</h4>
-          <span> India (and proud)</span>
+          <h4>Country of Origin:</h4><p>India (and proud)</p>
 
           <h4>Manufactured & Sold By:</h4>
           <p>
