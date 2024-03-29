@@ -4,9 +4,11 @@ import { FaSearch, FaUser, FaHeart, FaShoppingBag } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import "./Navbar.scss"
 import Logo from '../../img/Logo.png'
+import { useState } from 'react';
+import Cart from '../Cart/Cart';
 
 const Navbar = () => {
-
+const [open , setOpen] = useState(false)
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -41,13 +43,14 @@ const Navbar = () => {
             <FaSearch/>
             <FaUser/>
             <FaHeart/>
-            <div className="cartIcon">
+            <div className="cartIcon" onClick={()=>setOpen(!open)} >
               <FaShoppingBag/>
               <span>0</span>
             </div>
           </div>
         </div>
       </div>
+      {open && <Cart/>}
     </div>
   );
 };
