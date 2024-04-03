@@ -5,6 +5,7 @@ import axios from "axios";
 
 const FeaturedProducts = ({ type }) => {
   const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,9 +19,8 @@ const FeaturedProducts = ({ type }) => {
           }
         );
         setData(res.data.data);
-        console.log(res.data.data);
       } catch (error) {
-        console.log(error);
+        setError(error.message);
       }
     };
     fetchData();
@@ -32,9 +32,13 @@ const FeaturedProducts = ({ type }) => {
         <h1>{type} products</h1>
       </div>
       <div className="bottom">
-        {data && data.map((item) => (
-          <Card item={item} key={item.id} />
-        ))}
+        {error ? (
+          <p>Error: {error}</p>
+        ) : (
+          data.map((item) => (
+            <Card item={item} key={item.id} />
+          ))
+        )}
       </div>
     </div>
   );
