@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.scss";
-import logo from "../../img/Logo.png";
-import payment from "../../img/payment.png";
+// import logo from "../../img/Logo.png";
+// import payment from "../../img/payment.png";
 
 const Footer = () => {
   return (
@@ -43,13 +43,11 @@ const Footer = () => {
       </div>
       <div className="bottom">
         <div className="left">
-          <img src={logo} alt="" className="logo" />
           <span className="copyright">
             © Copyright 2023. All Rights Reserved
           </span>
         </div>
         <div className="right">
-          <img src={payment} alt="" />
         </div>
       </div>
     </div>
