@@ -7,6 +7,13 @@
         position: sticky;
         height: 100%;
         top: 1px;
+        .filterItem{
+            .inputItems{
+                .abcd{
+color: white;
+                }
+            }
+        }
     }
     .right{
         flex: 3;
