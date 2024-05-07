@@ -74,7 +74,7 @@ const Products = () => {
       <div className="right">
         <img
           className="catImg"
-          src=""
+          src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/category/catban-320240427114256.jpg?format=webp&w=1500&dpr=1.3"
           alt=""
         />
         <Lists catId={catId} maxPrice={maxPrice} sort={sort} SubCats={selectedSubCats} />
