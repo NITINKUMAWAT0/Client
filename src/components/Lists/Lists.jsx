@@ -5,9 +5,9 @@ import Card from "../Card/Card";
 
 const Lists = ({ subCats = [], maxPrice, sort, catId }) => {
   const { data, loading, error } = useFetch(
-    `/products?populate=*&[filter][categories][id]=${catId}${subCats.map(
-      (item) => `&[filter][categories][id][$eq]=${item}`
-    )}&[filter][price][&lte]=${maxPrice}&sort=price:${sort}`
+    `/products?populate=*&[filters][categories][id]=${catId}${subCats.map(
+      (item)=>`&[filter][sub_categories][id][$eq]=${item}`
+    )}`
   );
 console.log(data);
   return (
